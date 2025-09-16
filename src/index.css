@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer components {
+  /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
+}
+
+.scroll-linear > ul {
+  animation: animate-linear 17s linear infinite;
+}
+
+.scroll-linear:hover > ul {
+  animation-play-state: paused;
+}
+
+@keyframes animate-linear {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Row Two Start */
+.scroll-linear-two > ul {
+  animation: animate-linear-two 15s linear infinite;
+}
+
+.scroll-linear-two:hover > ul {
+  animation-play-state: paused;
+}
+
+@keyframes animate-linear-two {
+  0% {
+    transform: translateX(75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Row Two End */
+
+.no-scrollbar ::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
